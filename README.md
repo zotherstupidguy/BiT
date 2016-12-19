@@ -20,7 +20,9 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-      @domain = BiT::Domain.new do  
+	require 'mushin_dsf_bit'
+
+      	@domain = BiT::Domain.new do  
             all do  
               search max_results: 20, query: query, ssd_query: query, ssd_path: "/torrent_bots"
             end 
@@ -29,6 +31,8 @@ Or install it yourself as:
               most_seeded_torrents search_query: query, ssd_path: "/torrent_bots" 
             end 
           end 
+
+	@domain.store[:most_seeded_torrents].to_json
 ```
 
 ## Development
