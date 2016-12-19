@@ -33,5 +33,11 @@ module BiT
       end
     end
 
+    context "query" do 
+      construct "most_seeded_torrents" do
+	use ext: SSD::Ext                   , opts: {:path => :ssd_path, :cqrs => :cqrs_query}      , params: {:id => :search_query}
+      end
+    end
+
   end
 end
