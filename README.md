@@ -1,8 +1,5 @@
 # mushin_dsf_bit
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/mushin_dsf_bit`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+BiT allows you to do everything BitTorrenty in Ruby. BiT is a mushin-based Domain-specific Framework.
 
 ## Installation
 
@@ -22,7 +19,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+      @domain = BiT::Domain.new do  
+            all do  
+              search max_results: 20, query: query, ssd_query: query, ssd_path: "/torrent_bots"
+            end 
+
+            query do  
+              most_seeded_torrents search_query: query, ssd_path: "/torrent_bots" 
+            end 
+          end 
+```
 
 ## Development
 
